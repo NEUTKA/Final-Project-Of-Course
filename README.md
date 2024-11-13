@@ -60,3 +60,67 @@ Retention — один из ключевых показателей в комп�
     - Расчёт средней вовлечённости пользователей в событие.
     - Подсчёт уникальных предметов и бонусов, полученных во время события.
     - Оценка выручки от события для анализа эффективности.
+
+
+# Game Data Analytics
+
+Hello everyone!  
+This project is dedicated to data analysis and A/B testing for a gaming company.
+
+The project was implemented in Python using Jupyter Notebook.
+
+## Project Tasks
+
+### Task 1: Calculating Player Retention
+
+Retention is one of the key metrics for the company. Your task is to create a function to calculate daily player retention starting from the registration date.
+
+**Data Description**:
+- **`reg_data.csv`** — registration time data:
+  - `reg_ts` — registration time
+  - `uid` — unique player identifier
+
+- **`auth_data.csv`** — data on users' login times in the game:
+  - `auth_ts` — authorization time
+  - `uid` — unique player identifier
+
+### Task 2: Analysis of A/B Test for Advertising Offers
+
+The A/B test results showed that ARPU (average revenue per user) in the test group is 5% higher compared to the control group. In the control group, 1928 out of 202,103 users were paying users, while in the test group, there were 1805 paying users out of 202,667.
+
+- **Data**:
+  - `user_id` — user identifier
+  - `revenue` — revenue from the user
+  - `testgroup` — user group (control or test)
+
+**Objective**: Determine which offer set is the best. Which metrics should be analyzed to make a decision, and how?
+
+### Task 3: Event Analysis in the Game *Plants & Gardens*
+
+The game *Plants & Gardens* hosts monthly themed events with a limited timeframe. During these events, players can receive unique garden items, characters, extra coins, and bonuses by completing certain tasks.
+
+**Objective**: Identify metrics to evaluate the results of the latest event. Metrics may include the number of players who completed tasks, the average number of levels completed during the event, revenue from event participants, etc.
+
+## Description of Libraries Used
+
+- `pandas` — for data handling, table processing, and filtering
+- `numpy` — for mathematical operations and calculations
+- `seaborn` and `matplotlib.pyplot` — for data visualization
+- `scipy.stats` — for conducting statistical tests, such as the Mann-Whitney test, Levene's test, and one-way ANOVA
+
+## Key Functions and Methods
+
+- **Player Retention Analysis**:
+    - Calculating daily player retention starting from the registration date.
+    - Matching registration and authorization dates to calculate the number of retained users per day.
+
+- **Conducting A/B Testing**:
+    - **Metrics for Analysis**:
+        - ARPU (Average Revenue per User) for each group.
+        - Conversion rate of users to paying customers.
+        - Retention rate in each group.
+
+- **Game Event Analysis**:
+    - Calculating average user engagement in the event.
+    - Counting unique items and bonuses obtained during the event.
+    - Evaluating event revenue to assess effectiveness.
